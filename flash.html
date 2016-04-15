@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>My First HTML</title>
+<meta charset="UTF-8">
+<style>
+div {	
+	width: 20px;
+	height: 20px;
+	-webkit-animation:flash 1s infinite;
+}
+
+@-webkit-keyframes flash {
+0% {background-color:red; }
+50% {background-color:green;}
+100% {background-color:red;}
+}
+
+div.blueorange {	
+	width: 20px;
+	height: 20px;
+	-webkit-animation:flash2 1s infinite;
+}
+
+@-webkit-keyframes flash2 {
+0% {background-color:blue; }
+50% {background-color:orange;}
+100% {background-color:blue;}
+}
+</style>
+</head>
+<body>
+<div class="redgreen"></div><br>
+<div class="blueorange"></div>
+</body>
+</html>
