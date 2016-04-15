@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My First HTML</title>
+    <meta charset="UTF-8">
+    <style>
+    #spring {
+        color: darkgreen;
+        background-color: lightblue;
+        font-size: 30px;
+        font-family: Courier
+    }
+    
+    a:link {
+        color: red
+    }
+    
+    a:visited {
+        color: pink;
+    }
+    
+    div.redgreen {
+        width: 20px;
+        height: 20px;
+        -webkit-animation: flash1 1s infinite;
+    }
+    
+    @-webkit-keyframes flash1 {
+        0% {
+            background-color: red;
+        }
+        50% {
+            background-color: green;
+        }
+        100% {
+            background-color: red;
+        }
+    }
+    
+    div.blueorange {
+        width: 20px;
+        height: 20px;
+        -webkit-animation: flash2 1s infinite;
+    }
+    
+    @-webkit-keyframes flash2 {
+        0% {
+            background-color: blue;
+        }
+        50% {
+            background-color: orange;
+        }
+        100% {
+            background-color: blue;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <h1>My First Heading</h1>
+    <hr>
+    <pre style="background-color: lightblue; font-size: 30px;">
+		這個 
+		<pre><p id="spring"><b>		SPRING
+		</b></p></pre> 雨 下的好多
+    </pre>
+    <p title="Title1"><b>My first paragraph.</b></p>
+    <p>
+        <bdo dir="rtl">想試試看這個</bdo>
+    </p>
+    <a href="http://headshot.garena.tw/" target="_blank">走走走去官網</a>
+    <div class="redgreen"></div>
+    <div class="blueorange"></div>
+</body>
+
+</html>
