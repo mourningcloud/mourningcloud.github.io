@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=zh-tw>
 
 <head>
-    <title>My First HTML</title>
+    <title>《雷霆突擊》 柑仔店</title>
     <meta charset="UTF-8">
     <style>
     #header {
         width: 1000px;
         height: 50px;
         background-color: orange;
-        text-align: center;
-        vertical-align: middle;
+        display: table;
         margin-right: auto;
         margin-left: auto;
         color: #000000;
@@ -20,10 +19,10 @@
     div.redgreen {
         width: 20px;
         height: 20px;
-        -webkit-animation: flash1 1s infinite;
+        animation: flash1 1s infinite;
     }
     
-    @-webkit-keyframes flash1 {
+    @keyframes flash1 {
         0% {
             background-color: red;
             border-style: double;
@@ -41,10 +40,10 @@
     div.blueorange {
         width: 20px;
         height: 20px;
-        -webkit-animation: flash2 1s infinite;
+        animation: flash2 1s infinite;
     }
     
-    @-webkit-keyframes flash2 {
+    @keyframes flash2 {
         0% {
             background-color: blue;
             border-style: solid;
@@ -97,7 +96,7 @@
             </td>
             <td colspan="5">
                 <div id="header" style="text-align: center;">
-                    <p style="vertical-align:middle;">
+                    <p style="vertical-align:middle; display: table-cell;text-align: center;">
                         突擊柑仔店
                         <br> 4/27 開張 敬請期待</p>
                 </div>
@@ -142,6 +141,7 @@
         </tr>
     </table>
     <iframe src="Spring.html" width="1000" height="200" style="border:none;"></iframe>
+    <img src="380x224_1.jpg" width="380" height="224">
 </body>
 
 </html>
