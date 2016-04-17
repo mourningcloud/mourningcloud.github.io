@@ -116,7 +116,7 @@
                 <div class="redgreen"></div>
             </td>
             <td>
-                <a href="http://headshot.garena.tw/">
+                <a href="http://headshot.garena.tw/" target="_blank">
                     <div class="blueorange"></div>
                 </a>
             </td>
@@ -148,9 +148,17 @@
         window.alert("突擊柑仔店 0427 開張,敬請期待");
     }
     </script>
-    
     <button type="button" onclick="click2()">點我看菜單&spades;</button>
-    <table style="width:100%;" id="menu">
+    <table style="width:100%;">
+        <tr>
+            <td id="bubblemilkTea"></td>
+        </tr>
+        <tr>
+            <td id="tenpura"></td>
+        </tr>
+        <tr>
+            <td id="yashang"></td>
+        </tr>
     </table>
     <br/>
     <br/>
@@ -161,13 +169,19 @@
         <source src="King - Lauren Aquilina.mp3" type="audio/mpeg">
     </audio>
     <script type="text/javascript">
-    var bubble = 50, milkTea = 100, sum = bubble + milkTea
+    var bubble = 50,
+        milkTea = 100,
+        sum = bubble + milkTea
+    yashang = sum * 1.5
+
     function click1() {
         document.getElementById('click').innerHTML = "&uarr;點我吧吧吧"
     }
 
     function click2() {
-        document.getElementById('menu').innerHTML = "珍珠奶茶：NTD "+ sum
+        document.getElementById('bubblemilkTea').innerHTML = "珍珠奶茶：NTD " + (bubble + milkTea)
+        document.getElementById('tenpura').innerHTML = "甜不辣：NTD " + (20 + 80)
+        document.getElementById('yashang').innerHTML = "宜蘭溫泉鴨賞：NTD " + yashang
     }
     </script>
 </body>
