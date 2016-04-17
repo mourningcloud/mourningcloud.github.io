@@ -4,6 +4,7 @@
 <head>
     <title>《雷霆突擊》 柑仔店</title>
     <meta charset="UTF-8">
+    <link rel="icon" href="380x224_1" type="image/JPG">
     <style>
     #header {
         width: 1000px;
@@ -63,6 +64,13 @@
         font-family: Times New Roman;
     }
     </style>
+    <script type="text/javascript">
+    setMenu = {
+
+    }
+    var name = "Dinolaiwhereareyou";
+    var namel = name.length;
+    </script>
 </head>
 
 <body>
@@ -135,7 +143,7 @@
             <td></td>
             <td></td>
             <td id="click">
-                <button type="button" onclick="click1()">↑點我&hearts;</button>
+                <button type="button" onclick="this.innerHTML='點我嘛 ' + namel">↑點我&hearts;</button>
             </td>
             <td></td>
             <td></td>
@@ -145,7 +153,7 @@
     <button onclick="gamma()">啥?</button>
     <script>
     function gamma() {
-        window.alert("突擊柑仔店 0427 開張,敬請期待");
+        window.alert("突擊柑仔店 0427 開張, 敬請期待");
     }
     </script>
     <button type="button" onclick="click2()">點我看菜單&spades;</button>
@@ -173,15 +181,16 @@
         milkTea = 100,
         sum = bubble + milkTea,
         yashang = sum * 1.5;
+    x = product(60, 8)
 
-    function click1() {
-        document.getElementById('click').innerHTML = "&uarr;點我吧吧吧"
+    function product(a, b) {
+        return a * b;
     }
 
     function click2() {
-        document.getElementById('bubblemilkTea').innerHTML = "珍珠奶茶：NTD " + (bubble + milkTea)
-        document.getElementById('tenpura').innerHTML = "甜不辣：NTD " + (20 + 80)
-        document.getElementById('yashang').innerHTML = "宜蘭溫泉鴨賞：NTD " + yashang
+        document.getElementById('bubblemilkTea').innerHTML = "珍珠奶茶：NTD " + (bubble + milkTea);
+        document.getElementById('tenpura').innerHTML = "甜不辣：NTD " + (20 + 80);
+        document.getElementById('yashang').innerHTML = "宜蘭溫泉鴨賞：NTD " + (x + namel);
     }
     </script>
 </body>
