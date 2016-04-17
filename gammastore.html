@@ -66,7 +66,7 @@
 </head>
 
 <body>
-    <table style="width:100%">
+    <table style="width:100%;">
         <tr>
             <td>
                 <div class="redgreen"></div>
@@ -134,25 +134,42 @@
             <td></td>
             <td></td>
             <td></td>
-            <td id="click">↑點我&hearts;</td>
+            <td id="click">
+                <button type="button" onclick="click1()">↑點我&hearts;</button>
+            </td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
     </table>
-
     <button onclick="gamma()">啥?</button>
     <script>
     function gamma() {
         window.alert("突擊柑仔店 0427 開張,敬請期待");
     }
     </script>
+    
+    <button type="button" onclick="click2()">點我看菜單&spades;</button>
+    <table style="width:100%;" id="menu">
+    </table>
+    <br/>
+    <br/>
     <iframe src="Spring.html" width="1000" height="200" style="border:none;"></iframe>
     <img src="380x224_1.jpg" alt="這是一張圖" style="width: 380px; height: 224px;">
-    <iframe width="854" height="480" src="https://www.youtube.com/embed/9G9CPZ8Zd7k?start=67&showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
-    <audio controls autoplay="1">
+    <iframe width="854" height="480" src="https://www.youtube.com/embed/9G9CPZ8Zd7k?start=67&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <audio controls>
         <source src="King - Lauren Aquilina.mp3" type="audio/mpeg">
     </audio>
+    <script type="text/javascript">
+    var bubble = 50, milkTea = 100, sum = bubble + milkTea
+    function click1() {
+        document.getElementById('click').innerHTML = "&uarr;點我吧吧吧"
+    }
+
+    function click2() {
+        document.getElementById('menu').innerHTML = "珍珠奶茶：NTD "+ sum
+    }
+    </script>
 </body>
 
 </html>
