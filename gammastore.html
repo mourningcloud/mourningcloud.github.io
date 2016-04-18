@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang=zh-tw>
-
-<head>
-    <title>《雷霆突擊》 柑仔店</title>
-    <meta charset="UTF-8">
-    <link rel="icon" href="380x224_1" type="image/JPG">
-    <style>
-    #header {
+    <head>
+        <title>《雷霆突擊》 柑仔店</title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="380x224_1" type="image/JPG">
+        <style>
+        body #test{
+        background-color: white;
+        }
+        #header {
         width: 1000px;
         height: 50px;
         background-color: orange;
@@ -15,184 +17,182 @@
         margin-left: auto;
         color: #000000;
         padding: 10px;
-    }
-    
-    div.redgreen {
+        }
+        
+        div.redgreen {
         width: 20px;
         height: 20px;
         animation: flash1 1s infinite;
-    }
-    
-    @keyframes flash1 {
+        }
+        
+        @keyframes flash1 {
         0% {
-            background-color: red;
-            border-style: double;
+        background-color: red;
+        border-style: double;
         }
         50% {
-            background-color: green;
-            border-style: ridge;
+        background-color: green;
+        border-style: ridge;
         }
         100% {
-            background-color: red;
-            border-style: double;
+        background-color: red;
+        border-style: double;
         }
-    }
-    
-    div.blueorange {
+        }
+        
+        div.blueorange {
         width: 20px;
         height: 20px;
         animation: flash2 1s infinite;
-    }
-    
-    @keyframes flash2 {
+        }
+        
+        @keyframes flash2 {
         0% {
-            background-color: blue;
-            border-style: solid;
+        background-color: blue;
+        border-style: solid;
         }
         50% {
-            background-color: orange;
-            border-style: double;
+        background-color: orange;
+        border-style: double;
         }
         100% {
-            background-color: blue;
-            border-style: solid;
+        background-color: blue;
+        border-style: solid;
         }
-    }
-    
-    #click {
+        }
+        
+        #click {
         color: red;
         font-family: Times New Roman;
-    }
-    </style>
-    <script type="text/javascript">
-    setMenu = {
-
-    }
-    var name = "Dinolaiwhereareyou";
-    var namel = name.length;
-    </script>
-</head>
-
-<body>
-    <table style="width:100%;">
-        <tr>
-            <td>
-                <div class="redgreen"></div>
-            </td>
-            <td>
-                <div class="blueorange"></div>
-            </td>
-            <td>
-                <div class="redgreen"></div>
-            </td>
-            <td>
-                <div class="blueorange"></div>
-            </td>
-            <td>
-                <div class="redgreen"></div>
-            </td>
-            <td>
-                <div class="blueorange"></div>
-            </td>
-            <td>
-                <div class="redgreen"></div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div class="blueorange"></div>
-            </td>
-            <td colspan="5">
-                <div id="header" style="text-align: center;">
-                    <p style="vertical-align:middle; display: table-cell;text-align: center;">
-                        突擊柑仔店
-                        <br> 4/27 開張 敬請期待</p>
-                </div>
-            </td>
-            <td>
-                <div class="blueorange"></div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div class="redgreen"></div>
-            </td>
-            <td>
-                <div class="blueorange"></div>
-            </td>
-            <td>
-                <div class="redgreen"></div>
-            </td>
-            <td>
-                <a href="http://headshot.garena.tw/" target="_blank">
+        }
+        </style>
+        <script type="text/javascript">
+        setMenu = {
+        }
+        var name = "Dinolaiwhereareyou";
+        var namel = name.length;
+        </script>
+    </head>
+    <body id="test">
+        <table style="width:100%;">
+            <tr>
+                <td>
+                    <div class="redgreen"></div>
+                </td>
+                <td>
                     <div class="blueorange"></div>
-                </a>
-            </td>
-            <td>
-                <div class="redgreen"></div>
-            </td>
-            <td>
-                <div class="blueorange"></div>
-            </td>
-            <td>
-                <div class="redgreen"></div>
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td id="click">
-                <button type="button" onclick="this.innerHTML='點我嘛 ' + namel">↑點我&hearts;</button>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
-    <button onclick="gamma()">啥?</button>
-    <script>
-    function gamma() {
+                </td>
+                <td>
+                    <div class="redgreen"></div>
+                </td>
+                <td>
+                    <div class="blueorange"></div>
+                </td>
+                <td>
+                    <div class="redgreen"></div>
+                </td>
+                <td>
+                    <div class="blueorange"></div>
+                </td>
+                <td>
+                    <div class="redgreen"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="blueorange"></div>
+                </td>
+                <td colspan="5">
+                    <div id="header" style="text-align: center;">
+                        <p style="vertical-align:middle; display: table-cell;text-align: center;">
+                            突擊柑仔店
+                        <br> 4/27 開張 敬請期待</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="blueorange"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="redgreen"></div>
+                </td>
+                <td>
+                    <div class="blueorange"></div>
+                </td>
+                <td>
+                    <div class="redgreen"></div>
+                </td>
+                <td>
+                    <a href="http://headshot.garena.tw/" target="_blank">
+                        <div class="blueorange"></div>
+                    </a>
+                </td>
+                <td>
+                    <div class="redgreen"></div>
+                </td>
+                <td>
+                    <div class="blueorange"></div>
+                </td>
+                <td>
+                    <div class="redgreen"></div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="click">
+                    <button type="button" onclick="this.innerHTML='點我嘛 ' + namel">↑點我&hearts;</button>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <button onclick="gamma()">啥?</button>
+        <script>
+        function gamma() {
         window.alert("突擊柑仔店 0427 開張, 敬請期待");
-    }
-    </script>
-    <button type="button" onclick="click2()">點我看菜單&spades;</button>
-    <table style="width:100%;">
-        <tr>
-            <td id="bubblemilkTea"></td>
-        </tr>
-        <tr>
-            <td id="tenpura"></td>
-        </tr>
-        <tr>
-            <td id="yashang"></td>
-        </tr>
-    </table>
-    <br/>
-    <br/>
-    <iframe src="Spring.html" width="1000" height="200" style="border:none;"></iframe>
-    <img src="380x224_1.jpg" alt="這是一張圖" style="width: 380px; height: 224px;">
-    <iframe width="854" height="480" src="https://www.youtube.com/embed/9G9CPZ8Zd7k?start=67&showinfo=0" frameborder="0" allowfullscreen></iframe>
-    <audio controls>
-        <source src="King - Lauren Aquilina.mp3" type="audio/mpeg">
-    </audio>
-    <script type="text/javascript">
-    var bubble = 50,
+        }
+        </script>
+        <button type="button" onclick="click2()">點我看菜單&spades;</button>
+        <button type="button" onclick="test1()">夜晚降臨</button>
+        <table style="width:100%;">
+            <tr>
+                <td id="bubblemilkTea"></td>
+            </tr>
+            <tr>
+                <td id="tenpura"></td>
+            </tr>
+            <tr>
+                <td id="yashang"></td>
+            </tr>
+        </table>
+        <br/>
+        <br/>
+        <iframe src="Spring.html" width="1000" height="200" style="border:none;"></iframe>
+        <img src="380x224_1.jpg" alt="這是一張圖" style="width: 380px; height: 224px;">
+        <iframe width="854" height="480" src="https://www.youtube.com/embed/9G9CPZ8Zd7k?start=67&showinfo=0" frameborder="0" allowfullscreen></iframe>
+        <audio controls>
+            <source src="King - Lauren Aquilina.mp3" type="audio/mpeg">
+        </audio>
+        <script type="text/javascript">
+        var bubble = 50,
         milkTea = 100,
         sum = bubble + milkTea,
         yashang = sum * 1.5;
-    x = product(60, 8)
-
-    function product(a, b) {
+        x = product(60, 8)
+        function product(a, b) {
         return a * b;
-    }
-
-    function click2() {
+        }
+        function click2() {
         document.getElementById('bubblemilkTea').innerHTML = "珍珠奶茶：NTD " + (bubble + milkTea);
         document.getElementById('tenpura').innerHTML = "甜不辣：NTD " + (20 + 80);
         document.getElementById('yashang').innerHTML = "宜蘭溫泉鴨賞：NTD " + (x + namel);
-    }
-    </script>
-</body>
-
+        }
+        function test1 () {
+        document.getElementById("test").style.backgroundColor = "black"; }
+        </script>
+    </body>
 </html>
