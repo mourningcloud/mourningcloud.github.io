@@ -5,8 +5,8 @@
         <meta charset="UTF-8">
         <link rel="icon" href="380x224_1" type="image/JPG">
         <style>
-        body #test{
-        background-color: white;
+        #test{
+            background-color: white;
         }
         #header {
         width: 1000px;
@@ -66,15 +66,9 @@
         font-family: Times New Roman;
         }
         </style>
-        <script type="text/javascript">
-        setMenu = {
-        }
-        var name = "Dinolaiwhereareyou";
-        var namel = name.length;
-        </script>
     </head>
-    <body id="test">
-        <table style="width:100%;">
+    <body>
+        <table style="width:100%;background-color: white;" id="decotable">
             <tr>
                 <td>
                     <div class="redgreen"></div>
@@ -153,11 +147,11 @@
         <button onclick="gamma()">啥?</button>
         <script>
         function gamma() {
-        window.alert("突擊柑仔店 0427 開張, 敬請期待");
+            window.alert("突擊柑仔店 0427 開張, 敬請期待");
         }
         </script>
-        <button type="button" onclick="click2()">點我看菜單&spades;</button>
-        <button type="button" onclick="test1()">夜晚降臨</button>
+        <button type="button" id="menu-btn">點我看菜單&spades;</button>
+        <button id="nightbtn" type="button">夜晚降臨</button>
         <table style="width:100%;">
             <tr>
                 <td id="bubblemilkTea"></td>
@@ -178,21 +172,47 @@
             <source src="King - Lauren Aquilina.mp3" type="audio/mpeg">
         </audio>
         <script type="text/javascript">
+        
+        var bubbleId = 50;
+
+        document.querySelector('#nightbtn').addEventListener('click',test1);
+
         var bubble = 50,
-        milkTea = 100,
-        sum = bubble + milkTea,
-        yashang = sum * 1.5;
-        x = product(60, 8)
+            milkTea = 100,
+            sum = bubble + milkTea,
+            yashang = sum * 1.5,
+            x = product(60, 8);
+
         function product(a, b) {
-        return a * b;
+            return a * b;
         }
+
         function click2() {
-        document.getElementById('bubblemilkTea').innerHTML = "珍珠奶茶：NTD " + (bubble + milkTea);
-        document.getElementById('tenpura').innerHTML = "甜不辣：NTD " + (20 + 80);
-        document.getElementById('yashang').innerHTML = "宜蘭溫泉鴨賞：NTD " + (x + namel);
+            document.getElementById('bubblemilkTea').innerHTML = "珍珠奶茶：NTD " + (bubble + milkTea);
+            document.getElementById('tenpura').innerHTML = "甜不辣：NTD " + (20 + 80);
+            document.getElementById('yashang').innerHTML = "宜蘭溫泉鴨賞：NTD " + (x + namel);
         }
-        function test1 () {
-        document.getElementById("test").style.backgroundColor = "black"; }
+
+        function test1() {           
+            var docotable = document.getElementById("decotable");
+            var nightbtn = document.querySelector("#nightbtn");
+            var bColor = decotable.style.backgroundColor;
+
+            if (bColor === "white") {
+                bColor = "black";
+                nightbtn.innerHTML = "白晝歸來";
+            } else if (bColor === "black") {
+                bColor = "white";
+                nightbtn.innerHTML = "黑夜降臨";
+            } else {
+                window.alert("欸?!");
+            }
+
+            alert("finish");            
+        }
+        
+        var name = "Dinolaiwhereareyou";
+        var namel = name.length;
         </script>
     </body>
 </html>
