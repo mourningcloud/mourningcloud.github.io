@@ -213,15 +213,15 @@
     document.querySelector('#nightbtn').addEventListener('click', test1);
 
     function test1() {
-
-        var bcColor = document.querySelector('#decotable').style.backgroundColor;
+        
+        var bgbefore = document.querySelector('#decotable')
         var nightbtn = document.querySelector('#nightbtn');
 
-        if (bcColor === "white") {
-            bcColor = "black";
+        if (bgbefore.style.backgroundColor === "white") {
+            bgbefore.style.backgroundColor = "black";
             nightbtn.innerHTML = "白晝歸來";
-        } else if (bcColor === "black") {
-            bcColor = "white";
+        } else if (bgbefore.style.backgroundColor === "black") {
+            bgbefore.style.backgroundColor = "white";
             nightbtn.innerHTML = "黑夜降臨";
         } else {
             window.alert("欸?!");
