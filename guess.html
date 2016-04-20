@@ -21,11 +21,10 @@
             <br/>
             <input type="submit" value="送出" onclick="guess()" id="verify">
         </p>
-        <p id="alert-txt"></p>
-        <span>您目前共猜了 </span><span id="times">0</span><span> 次。</span>
-        <p id="history">
-            歷史紀錄：
+        <p id="alert-txt">
         </p>
+        <p>歷史紀錄：</p><span>您目前共猜了 </span><span id="times">0</span><span> 次。</span>
+        <p id="history"></p>
     </div>
     <script type="text/javascript">
     document.querySelector('#verify').addEventListener('click', times);
@@ -41,6 +40,7 @@
         var innum1 = document.querySelector('#guess').value;
         var innum = parseFloat(innum1);
         var alertTxt = document.querySelector('#alert-txt');
+        var historyTxt = document.querySelector('#history');
 
         if (innum > 100 || innum < 1) {
             alertTxt.innerHTML = "你猜了：" + innum1 + ", 看不懂中文逆";
@@ -56,7 +56,12 @@
             alertTxt.innerHTML = "你猜了：" + innum1 + ", 賓果！";
         } else {
             alertTxt.innerHTML = "你猜了：" + innum1 + ", 你剛打了神馬?@@";
+
+
         }
+
+        historyTxt.innerHTML = alertTxt.innerHTML;
+
     }
     </script>
 </body>
