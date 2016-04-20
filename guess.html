@@ -24,7 +24,8 @@
         <p id="alert-txt">
         </p>
         <p>歷史紀錄：</p><span>您目前共猜了 </span><span id="times">0</span><span> 次。</span>
-        <p id="history"></p>
+        <br/>
+        <span id="history"></span>
     </div>
     <script type="text/javascript">
     document.querySelector('#verify').addEventListener('click', times);
@@ -40,27 +41,28 @@
         var innum1 = document.querySelector('#guess').value;
         var innum = parseFloat(innum1);
         var alertTxt = document.querySelector('#alert-txt');
+        var result;
         var historyTxt = document.querySelector('#history');
 
         if (innum > 100 || innum < 1) {
-            alertTxt.innerHTML = "你猜了：" + innum1 + ", 看不懂中文逆";
+            result = "你猜了：" + innum1 + ", 看不懂中文逆";
         } else if (innum % 1 != 0) {
-            alertTxt.innerHTML = "你猜了：" + innum1 + ", 看不懂要整數的規則逆";
+            result = "你猜了：" + innum1 + ", 看不懂要整數的規則逆";
         } else if (isNaN(innum1) === true) {
-            alertTxt.innerHTML = "你猜了：" + innum1 + ", 想試數列?!";
+            result = "你猜了：" + innum1 + ", 想試數列?!";
         } else if (innum > ansnum1) {
-            alertTxt.innerHTML = "你猜了：" + innum1 + ", 往下踹踹";
+            result = "你猜了：" + innum1 + ", 往下踹踹";
         } else if (innum < ansnum1) {
-            alertTxt.innerHTML = "你猜了：" + innum1 + ", 往上踹踹";
+            result = "你猜了：" + innum1 + ", 往上踹踹";
         } else if (innum === ansnum1) {
-            alertTxt.innerHTML = "你猜了：" + innum1 + ", 賓果！";
+            result = "你猜了：" + innum1 + ", 賓果！";
         } else {
-            alertTxt.innerHTML = "你猜了：" + innum1 + ", 你剛打了神馬?@@";
+            result = "你猜了：" + innum1 + ", 你剛打了神馬?@@";
 
 
         }
 
-        historyTxt.innerHTML += "<br/>" + alertTxt.innerHTML;
+        historyTxt.innerHTML += "<br/>" + result;
 
     }
     </script>
