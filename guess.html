@@ -16,26 +16,33 @@
 <body>
     <div>
         <p>
-            <input type="text" id="guess">請填入一個 1 到 100 的整數
+            <input type="text" id="guess"> 請填入一個 1 到 100 的整數
+            <br/>
+            <br/>
             <input type="submit" value="送出" onclick="guess()">
         </p>
     </div>
     <script type="text/javascript">
     function guess() {
         var innum1 = document.querySelector('#guess').value;
-        var innum = parseInt(innum1);
+        var innum = parseFloat(innum1);
 
         console.log(ansnum1);
 
         if (innum > 100 || innum < 1) {
-            alert("看不懂中文逆")
+            alert("看不懂中文逆");
+        } else if (innum % 1 != 0) {
+            alert("看不懂規則逆");
         } else if (innum > ansnum1) {
             alert("往下踹踹");
         } else if (innum < ansnum1) {
             alert("往上踹踹");
         } else if (innum === ansnum1) {
             alert("賓果！");
+        } else {
+            alert("你剛打了神馬?@@");
         }
+
 
     }
     </script>
