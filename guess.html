@@ -19,31 +19,44 @@
             <input type="text" id="guess"> 請填入一個 1 到 100 的整數
             <br/>
             <br/>
-            <input type="submit" value="送出" onclick="guess()">
+            <input type="submit" value="送出" onclick="guess()" id="verify">
+        </p>
+        <p id="alert-txt"></p>
+        <span>您目前共猜了 </span><span id="times">0</span><span> 次。</span>
+        <p id="history">
+            歷史紀錄：
         </p>
     </div>
     <script type="text/javascript">
+    document.querySelector('#verify').addEventListener('click', times);
+    var clickcnt = 0;
+
+    function times() {
+        var times = document.querySelector('#times');
+        clickcnt += 1;
+        times.innerHTML = clickcnt;
+    }
+
     function guess() {
         var innum1 = document.querySelector('#guess').value;
         var innum = parseFloat(innum1);
-
-        console.log(ansnum1);
+        var alertTxt = document.querySelector('#alert-txt');
 
         if (innum > 100 || innum < 1) {
-            alert("看不懂中文逆");
+            alertTxt.innerHTML = "你猜了：" + innum1 + ", 看不懂中文逆";
         } else if (innum % 1 != 0) {
-            alert("看不懂規則逆");
+            alertTxt.innerHTML = "你猜了：" + innum1 + ", 看不懂要整數的規則逆";
+        } else if (isNaN(innum1) === true) {
+            alertTxt.innerHTML = "你猜了：" + innum1 + ", 想試數列?!";
         } else if (innum > ansnum1) {
-            alert("往下踹踹");
+            alertTxt.innerHTML = "你猜了：" + innum1 + ", 往下踹踹";
         } else if (innum < ansnum1) {
-            alert("往上踹踹");
+            alertTxt.innerHTML = "你猜了：" + innum1 + ", 往上踹踹";
         } else if (innum === ansnum1) {
-            alert("賓果！");
+            alertTxt.innerHTML = "你猜了：" + innum1 + ", 賓果！";
         } else {
-            alert("你剛打了神馬?@@");
+            alertTxt.innerHTML = "你猜了：" + innum1 + ", 你剛打了神馬?@@";
         }
-
-
     }
     </script>
 </body>
