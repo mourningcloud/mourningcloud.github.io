@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title>GC test</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+    google.charts.load('current', {
+        'packages': ['corechart']
+    });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', '夜市');
+        data.addColumn('number', '支持人數');
+        data.addRows([
+            ['寧夏夜市', 387],
+            ['樂華夜市', 257],
+            ['蘆洲廟口夜市', 133],
+            ['中原夜市', 51],
+            ['中壢觀光夜市', 477],
+            ['城隍廟夜市', 48],
+            ['英才觀光夜市', 47],
+            ['羅東夜市', 244],
+            ['東門觀光夜市', 29],
+            ['東大門夜市', 42],
+            ['逢甲夜市', 801],
+            ['一中街夜市', 181],
+            ['精誠夜市', 78],
+            ['斗六夜市', 88],
+            ['文化路夜市', 73],
+            ['花園夜市', 359],
+            ['興中夜市', 16],
+            ['瑞豐夜市', 550],
+            ['六合夜市', 59]
+        ]);
+
+        var options = {
+            'title': '夜市大進擊票選結果'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('nightMarketResults'));
+        chart.draw(data, {
+            width: 1200,
+            height: 600,
+            title: '夜市大進擊票選結果',
+            titleFontSize: 30,
+            titleColor: 'white',
+            legendTextColor: 'white',
+            backgroundColor: '#00070D',
+            colors: [
+                '#fcc5c0',
+                '#fa9fb5',
+                '#d0d1e6',
+                '#a6bddb',
+                '#74a9cf',
+                '#f768a1',
+                '#c7e9c0',
+                '#a1d99b',
+                '#74c476'
+            ],
+
+            is3D: true
+        });
+    }
+    </script>
+</head>
+
+<body>
+    <div id="nightMarketResults" style="width: 100%; height: 100%;"></div>
+</body>
+
+</html>
