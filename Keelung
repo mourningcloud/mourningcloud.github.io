@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang=en>
+	<head>
+		<title>跳跳圖</title>
+		<meta charset="UTF-8">
+		<link href="C:\Users\lir\Downloads\lightbox2-master\lightbox2-master\dist\css\lightbox.css" rel="stylesheet">
+	</head>
+	<body>
+		<a href="http://image.garena.tw/headshot/%E5%85%AC%E5%91%8A/%E6%B4%BB%E5%8B%95%E5%9C%96/%E5%A4%9C%E5%B8%82%E5%A4%A7%E9%80%B2%E6%93%8A/%E5%9F%BA%E9%9A%86%E5%A4%9C%E5%B8%82.jpg" data-lightbox="test1" data-title="My caption">基隆</a>
+		<script src="C:\Users\lir\Downloads\lightbox2-master\lightbox2-master\dist\js\lightbox-plus-jquery.js"></script>
+	</body>
+</html>
