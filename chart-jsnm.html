@@ -1,0 +1,32 @@
+ <html>
+  <head>
+    <title>Charts.JS test</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.1/Chart.bundle.min.js"></script>
+<script>
+    var NMR = document.querySelector("#nightMarketResults");
+    var myChart = new Chart(NMR, {
+    type: 'bar',
+    data: {
+        labels: ["寧夏夜市", "樂華夜市", "蘆洲廟口夜市", "中原夜市", "中壢觀光夜市", "城隍廟夜市", "英才觀光夜市", "羅東夜市", "東門觀光夜市", "東大門夜市", "逢甲夜市", "一中街夜市", "精誠夜市", "斗六夜市", "文化路夜市", "花園夜市", "興中夜市", "瑞豐夜市", "六合夜市"],
+        datasets: [{
+            label: '夜市大進擊票選結果',
+            data: [387, 257, 133, 51, 477, 48, 47, 244, 29, 42, 801, 181, 78, 88, 73, 359, 16, 550, 59]
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+  </head>
+  <body>
+    <canvas id="nightMarketResults" width="400" height="400"></canvas>
+  </body>
+</html>
