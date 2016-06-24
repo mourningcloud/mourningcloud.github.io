@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>星座占卜_test160625</title>
+	<style>
+ 		 .hide { position:absolute; top:-1px; left:-1px; width:1px; height:1px; }
+	</style>
+</head>
+<body>
+<link href="/lightbox2-master/dist/css/lightbox.min.css" rel="stylesheet">
+<style type="text/css">
+input[type=text] {
+    background-color: white;
+    color: #00070D;
+}
+
+input[type=date] {
+    background-color: white;
+    color: #00070D;
+}
+
+input[type=submit] {
+    color: #00070D;
+}
+
+.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    width: 100px;
+    height: 25px;
+    background-color: white;
+    color: #00070D;
+    padding: 2px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: yellow;
+    color: black;
+}
+#pic_horo {
+    vertical-align: middle;
+    text-align: center;
+}
+#pic_horo:hover {
+    font-weight: bold;
+    color: #00070D;
+}
+</style>
+<form action="horoscope.php" method="get" name="horoForm" target="hiddenFrame">
+	姓名：
+    <br/>
+    <input id="nameInput" name="name" type="text" required>
+    <br/>
+    <br/> 請選擇你的性別:
+    <br/>
+    <input checked="checked" class="gender" name="gender" type="radio" value="male"> 男
+    <br />
+    <input class="gender" name="gender" type="radio" value="female"> 女
+    <br />
+    <br /> 請選擇你的生日
+    <br/>
+    <input id="bDay" name="bday" type="date" value="bdaydate" required>
+    <br />
+    <br />
+    <!-- <button type="submit" id="pic_horo" href="http://image.garena.tw/headshot/Horoscope_test/Bg.png" style="font-family: sans-serif;" target="_blank" data-lightbox="BLACK" onclick="displayPic()" value="submit">立即查看!</button> -->
+    </form>
+    <div class="button"><a id="pic_horo" onclick="displayPic()" href="#" target="_self" style="font-family: sans-serif;" data-lightbox="BLACK" data-title="黑">立即查看！</a></div>
+    
+	<!-- <a id="pic_horo" href="http://image.garena.tw/headshot/Horoscope_test/Bg.png" style="color:#00070D; font-family: sans-serif;" target="_blank" data-lightbox="BLACK"><input id="submit" type="submit" value="立即查看!" formaction="displayPic()"/></a> -->
+
+    <iframe class="hide" name="hiddenFrame"></iframe>
+
+    <script>
+    function displayPic() {
+    	var nameVar = document.querySelector('#nameInput');
+    	var nameValue = nameVar.value;
+        
+        var bDayElement = document.querySelector('#bDay');
+        var bDayValue = bDayElement.value;
+
+    	if (nameValue.length == 0) {
+    		// document.querySelector('#pic_horo').removeAttribute("target");
+			alert("請填寫姓名");	
+    		return;
+    	}
+    	if (bDayValue.length == 0) {
+    		alert("請填寫生日");
+   			//document.querySelector('#pic_horo').removeAttribute("href");
+			// document.querySelector('#pic_horo').removeAttribute("target");
+			// document.querySelector('#pic_horo').removeAttribute("data-lightbox");
+			// document.querySelector('#pic_horo').removeAttribute("data-title");	
+			return;
+    	}
+
+        var bDayElement = document.querySelector('#bDay');
+        var bDayValue = bDayElement.value;
+        var horoDate = bDayValue.substring(5, 10);
+        console.log(bDayValue);
+        console.log(horoDate);
+
+        // if (bDayValue.length == 10) {
+        	// var picHoroElement = document.querySelector('#pic_horo');
+        	// var picHoroTarget  = document.createAttribute("target");
+        	// picHoroTarget = "_blank";
+        	// picHoroElement.setAttributeNode(picHoroTarget);
+
+        // }      
+
+        // console.log()
+
+        if ((horoDate >= "03-21" && horoDate <= "04-19")) {
+        	document.querySelector('#pic_horo').setAttribute("target", "_blank")
+            document.querySelector('#pic_horo').href = "http://image.garena.tw/headshot/%E5%85%AC%E5%91%8A/%E6%B4%BB%E5%8B%95%E5%9C%96/_MG_8300.jpg";
+        } else if ((horoDate >= "04-20" && horoDate <= "05-20")) {
+            document.querySelector('#pic_horo').href = "http://image.garena.tw/headshot/%E5%85%AC%E5%91%8A/%E6%B4%BB%E5%8B%95%E5%9C%96/0115.jpg";
+            // document.querySelector('#pic_horo').data - title = "金牛座";
+        } else if ((horoDate >= "05-21" && horoDate <= "06-21")) {
+            document.querySelector('#pic_horo').href = "http://image.garena.tw/headshot/%E5%85%AC%E5%91%8A/%E6%B4%BB%E5%8B%95%E5%9C%96/1200x630_v1r1.jpg";
+        } else if ((horoDate >= "06-22" && horoDate <= "07-23")) {
+            document.querySelector('#pic_horo').href = "http://image.garena.tw/headshot/%E5%85%AC%E5%91%8A/%E6%B4%BB%E5%8B%95%E5%9C%96/1216.jpg";
+        } else if ((horoDate >= "07-24" && horoDate <= "08-23")) {
+            document.querySelector('#pic_horo').href = "http://image.garena.tw/headshot/%E5%85%AC%E5%91%8A/%E6%B4%BB%E5%8B%95%E5%9C%96/093002.jpg";
+        } else if ((horoDate >= "08-24" && horoDate < "09-22")) {
+            document.querySelector('#pic_horo').href = "http://image.garena.tw/headshot/%E5%85%AC%E5%91%8A/%E6%B4%BB%E5%8B%95%E5%9C%96/0407/%E6%9C%B1%E6%9C%B11200x630.jpg";
+        } else if ((horoDate >= "09-23" && horoDate <= "10-22")) {
+            document.querySelector('#pic_horo').href = "http://image.garena.tw/headshot/%E5%85%AC%E5%91%8A/%E6%B4%BB%E5%8B%95%E5%9C%96/0310/GAK.jpg";
+        } else if ((horoDate >= "10-23" && horoDate <= "11-22")) {
+            document.querySelector('#pic_horo').href = "http://image.garena.tw/headshot/%E5%85%AC%E5%91%8A/%E6%B4%BB%E5%8B%95%E5%9C%96/0512/%E6%88%B0%E9%B7%B911200x628.jpg";
+        } else if ((horoDate >= "11-23" && horoDate <= "12-20")) {
+            document.querySelector('#pic_horo').href = "http://image.garena.tw/headshot/%E5%85%AC%E5%91%8A/%E6%B4%BB%E5%8B%95%E5%9C%96/0608/06082A-1200630.jpg";
+        } else if ((horoDate >= "12-21" && horoDate <= "01-20")) {
+            document.querySelector('#pic_horo').href = "http://image.garena.tw/headshot/%E5%85%AC%E5%91%8A/%E6%B4%BB%E5%8B%95%E5%9C%96/0623/T21200X628.jpg";
+        } else if ((horoDate >= "01-21" && horoDate <= "02-19")) {
+            document.querySelector('#pic_horo').href = "http://image.garena.tw/headshot/%E5%85%AC%E5%91%8A/%E6%B4%BB%E5%8B%95%E5%9C%96/0519/TT911200X628.jpg";
+        } else {
+            document.querySelector('#pic_horo').href = "http://image.garena.tw/headshot/%E5%85%AC%E5%91%8A/%E6%B4%BB%E5%8B%95%E5%9C%96/0128/F-1200X627.jpg";
+        }
+    }
+    </script>
+    <script src="/lightbox2-master/dist/js/lightbox-plus-jquery.min.js"></script>
+</body>
+</html>
